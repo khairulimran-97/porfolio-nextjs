@@ -6,7 +6,7 @@ import AboutMain from "../about";
 import Image from "next/image";
 
 const heroContent = {
-  heroImage: "/assets/img/hero/New Project.png",
+  heroImage: "/assets/img/hero/hero.png",
   heroMobileImage: heroImgMobile,
   heroTitleName: "steve milner",
   heroDesignation: "web designer",
