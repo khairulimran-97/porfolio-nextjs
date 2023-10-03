@@ -8,7 +8,7 @@ import Image from "next/image";
 const heroContent = {
   heroImage: "/assets/img/hero/hero.png",
   heroMobileImage: heroImgMobile,
-  heroTitleName: "steve milner",
+  heroTitleName: "khairul imran",
   heroDesignation: "web designer",
   heroDescriptions: `I'm a Tunisian based web designer & front‑end developer focused on
   crafting clean & user‑friendly experiences, I am passionate about
