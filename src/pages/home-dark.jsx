@@ -16,7 +16,8 @@ const menuItem = [
   { icon: "fa-user", menuName: "About" },
   { icon: "fa-briefcase", menuName: "Portfolio" },
   { icon: "fa-envelope-open", menuName: "Contact" },
-  { icon: "fa-comments", menuName: "Blog" },
+  //{ icon: "fa-comments", menuName: "Blog" },
+  { icon: "fa-external-link", menuName: "Blog", externalLink: "https://thedailyinfowp.com" },
 ];
 
 const HomeDark = () => {
@@ -34,7 +35,7 @@ const HomeDark = () => {
           <div className="header">
             <TabList className=" icon-menu  revealator-slideup revealator-once revealator-delay1">
               {menuItem.map((item, i) => (
-                <Tab className="icon-box" key={i}>
+                <Tab className="icon-box" key={i} onClick={() => handleExternalLink(item.externalLink)}>
                   <i className={`fa ${item.icon}`}></i>
                   <h2>{item.menuName}</h2>
                 </Tab>
@@ -45,7 +46,7 @@ const HomeDark = () => {
 
           <div className="tab-panel_list">
             {/* Hero Content Starts */}
-            <TabPanel className="home ">
+            <TabPanel className="home">
               <div
                 className="container-fluid main-container container-home p-0 g-0"
                 data-aos="fade-up"
@@ -137,6 +138,7 @@ const HomeDark = () => {
             {/* Contact Content Ends */}
 
             {/* Blog Content Starts */}
+            
             <TabPanel className="blog">
               <div
                 className="title-section text-start text-sm-center "
@@ -160,6 +162,7 @@ const HomeDark = () => {
                 {/* Articles Ends */}
               </div>
             </TabPanel>
+
             {/* Blog Content Ends */}
           </div>
         </Tabs>
@@ -167,5 +170,13 @@ const HomeDark = () => {
     </Wrapper>
   );
 };
+
+const handleExternalLink = (externalLink) => {
+  if (externalLink) {
+    window.open(externalLink, "_blank");
+  }
+};
+
+
 
 export default HomeDark;
