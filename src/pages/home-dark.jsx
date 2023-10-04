@@ -173,7 +173,7 @@ const HomeDark = () => {
 
 const handleExternalLink = (externalLink) => {
   if (externalLink) {
-    window.open(externalLink, "_blank");
+    window.location.href = externalLink;
   }
 };
 

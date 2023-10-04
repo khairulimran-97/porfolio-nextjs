@@ -10,7 +10,7 @@ const AllBlogData = () => {
   const blogsData = [
     {
       id: 1,
-      img: img1,
+      img: "https://staging.dev-aplikasiniaga.com/wp-content/uploads/2020/12/hoodie_5_front-300x300.jpg",
       title: "How to Own Your Audience by Creating an Email List",
       commentor: "Rio ",
       date: "21 April 2022",

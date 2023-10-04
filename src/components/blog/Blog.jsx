@@ -28,7 +28,7 @@ const Blog = () => {
             >
               <div className="post-thumb">
                 <div className="d-block position-relative overflow-hidden">
-                  <Image src={item?.img} className="img-fluid" alt="item.title" />
+                  <Image src={item?.img}  width={500} height={500} className="img-fluid" alt="item.title" />
                 </div>
               </div>
               {/* End .thumb */}
