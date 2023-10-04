@@ -2,26 +2,18 @@ import React from "react";
 
 const educationContent = [
   {
-    year: "2015",
-    degree: "ENGINEERING DEGREE",
-    institute: "OXFORD UNIVERSITY",
-    details: `  Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore
-        adipisicing elit`,
+    year: "2016 - 2020",
+    degree: "BACHELOR DEGREE",
+    institute: "UNIVERSITI TUN HUSSEIN ONN MALAYSIA",
+    details: `I'm diving into the programming world, learning HTML, CSS, C#, Java, PHP, and more at UTHM for a Computer Science degree in Web Technology. The excitement? A final year project—creating an app with Android Studio. It all started with a challenge, and now I'm hooked on programming!`,
   },
   {
-    year: "2012",
-    degree: "MASTER DEGREE",
-    institute: "KIEV UNIVERSITY",
-    details: `Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol
-        elit, tempor incididunt`,
-  },
-  {
-    year: "2009",
-    degree: "BACHELOR DEGREE ",
-    institute: "TUNIS HIGH SCHOOL",
-    details: `Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur
-        elit, sed do eiusmod tempor duntt`,
-  },
+    year: "2015 - 2016",
+    degree: "MATRICULATION ",
+    institute: "PENANG MATRICULATION COLLEGE",
+    details: `I kicked off my journey by enrolling in a one-year matriculation program at Penang Matriculation College (KMPP). Little did I know, this was the gateway to my first encounter with computer science, diving into the world of C++. The result? A newfound passion for programming sparked during that transformative year of learning.`,
+  }, 
+
 ];
 
 const Education = () => {

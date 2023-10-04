@@ -2,25 +2,22 @@ import React from "react";
 
 const experienceContent = [
   {
-    year: "   2018 - Present",
-    position: " Web Developer",
-    compnayName: "Envato",
-    details: `  Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore
-        adipisicing elit`,
+    year: "DEC 2020 - Present",
+    position: "JUNIOR WEB DESIGNER",
+    compnayName: "LOCAL COMPANY IN KOTA BHARU",
+    details: `The genesis of my career led me to the captivating realm of web design, where I found my calling in offering expert assistance and maintenance for WordPress websites. It was during this chapter that my comprehension of WordPress deepened, allowing me to weave my creativity into a myriad of website designs that consistently brought joy to our satisfied clientele.`,
   },
   {
-    year: "2013 - 2018",
-    position: " UI/UX Designer",
-    compnayName: "Themeforest",
-    details: `Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol
-        elit, tempor incididunt`,
+    year: "JUN 2020 - OKT 2020",
+    position: " IT ASSISTANT",
+    compnayName: "RICH JEWELLERY",
+    details: `Immersed in the world of gold jewelry business, I absorbed fresh insights into the intricate market dynamics of gold. Surprisingly, amidst the gleaming gold, I embarked on my maiden voyage into the realm of WordPress. It was here that I not only encountered WordPress for the first time but also flexed my newfound skills to construct my inaugural ecommerce website, powered by the dynamic duo of WordPress and WooCommerce.`,
   },
   {
-    year: "2005 - 2013",
-    position: "Consultant",
-    compnayName: "Videohive",
-    details: `Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur
-        elit, sed do eiusmod tempor duntt`,
+    year: "JAN 2020 - APRIL 2020",
+    position: "IT ASSISTANT",
+    compnayName: "FUEL RICH SDN BHD",
+    details: `Venturing into the exciting realm of digital marketing, my aim is to absorb knowledge like a sponge and gather a treasure trove of new experiences. In this endeavor, I'm gearing up to wear multiple hats—from crafting a stellar website for the company to designing eye-catching posters. But that's not all—I'll also be diving into the intricacies of stock management, ensuring smooth operations in this dynamic digital landscape. Exciting times ahead!`,
   },
 ];
 

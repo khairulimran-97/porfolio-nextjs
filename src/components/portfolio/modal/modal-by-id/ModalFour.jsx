@@ -57,17 +57,8 @@ const ModalFour = ({ modalId, setGetModal }) => {
                   );
                 })}
               </div>
-              <figure className="modal__img">
-                {/* <img src={item.image} alt="portfolio project demo" /> */}
-                <video
-                  id="video"
-                  className="responsive-video"
-                  controls
-                  poster={item.image}
-                >
-                  <source src={'/assets/img/portfolio/video.mp4'} type="video/mp4" />
-                  {/* <source src="img/" type="video/mp4" /> */}
-                </video>
+              <figure className="modal__img"> 
+                <Image src={item.image} alt="portfolio project demo" />
               </figure>
 
               <button

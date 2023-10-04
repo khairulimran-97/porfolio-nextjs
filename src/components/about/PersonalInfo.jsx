@@ -1,16 +1,20 @@
 import React from "react";
 
+const calculateAge = (birthYear) => {
+  const currentYear = new Date().getFullYear();
+  return `${currentYear - birthYear} Years`;
+};
+
 const personalInfoContent = [
-  { meta: "first name", metaInfo: "Steve", hasColor: "" },
-  { meta: "last name", metaInfo: "Milner", hasColor: "" },
-  { meta: "Age", metaInfo: "27 Years", hasColor: "" },
-  { meta: "Nationality", metaInfo: "Tunisian", hasColor: "" },
-  { meta: "Freelance", metaInfo: "Available", hasColor: "green" },
-  { meta: "Address", metaInfo: "Tunis", hasColor: "" },
-  { meta: "phone", metaInfo: "+21621184010", hasColor: "" },
-  { meta: "Email", metaInfo: "you@mail.com", hasColor: "" },
-  { meta: "Skype", metaInfo: " steve.milner", hasColor: "" },
-  { meta: "langages", metaInfo: "French, English", hasColor: "" },
+  { meta: "Name", metaInfo: "Khairul Imran", hasColor: "" },
+  { meta: "Age", metaInfo: calculateAge(1997), hasColor: "" },
+  { meta: "Nationality", metaInfo: "Malaysia", hasColor: "" },
+  { meta: "Employment", metaInfo: "Full Time", hasColor: "green" },
+  { meta: "City", metaInfo: "Kota Bharu,Kelantan", hasColor: "" },
+  { meta: "phone", metaInfo: "+6017-9789 587", hasColor: "" },
+  { meta: "Email", metaInfo: "info@khairulimran.com", hasColor: "" },
+  { meta: "Degree", metaInfo: " Web Technology", hasColor: "" },
+  { meta: "Language", metaInfo: "Malay, English", hasColor: "" },
 ];
 
 const PersonalInfo = () => {

@@ -1,10 +1,15 @@
 import React from "react";
 
+const calculate = (birthYear) => {
+  const currentYear = new Date().getFullYear();
+  return `${currentYear - birthYear}`;
+};
+
 const achievementsContent = [
-  { title: "12", subTitle1: "years of", subTitle2: "experience" },
-  { title: "97", subTitle1: "completed", subTitle2: "projects" },
-  { title: "81", subTitle1: "Happy", subTitle2: "customers" },
-  { title: "53", subTitle1: "awards", subTitle2: "won" },
+  { title: calculate(2020), subTitle1: "years of", subTitle2: "experience" },
+  { title: "25", subTitle1: "completed", subTitle2: "website" },
+  { title: "50", subTitle1: "Mockup", subTitle2: "Design" },
+  { title: "5", subTitle1: "Custom", subTitle2: "Plugin" },
 ];
 
 const Achievements = () => {

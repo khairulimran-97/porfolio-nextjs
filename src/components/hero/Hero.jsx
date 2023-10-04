@@ -10,10 +10,7 @@ const heroContent = {
   heroMobileImage: heroImgMobile,
   heroTitleName: "khairul imran",
   heroDesignation: "web designer",
-  heroDescriptions: `I'm a Tunisian based web designer & front‑end developer focused on
-  crafting clean & user‑friendly experiences, I am passionate about
-  building excellent software that improves the lives of those
-  around me.`,
+  heroDescriptions: `Hey there! I'm Muhammad Khairul Imran Yaakub, your go-to maestro for web design magic in Malaysia. Dive into a world where dynamic visuals meet flawless functionality—I specialize in creating web pages that are not just eye candy but also a breeze to navigate.`,
   heroBtn: "more about me",
 };
 

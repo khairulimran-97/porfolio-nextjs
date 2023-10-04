@@ -39,11 +39,12 @@ const index = () => {
               {/* End personal info */}
 
               <div className="col-12 mt-1">
-                <a className="button" href={cv} download>
-                  <span className="button-text">Download CV</span>
-                  <span className="button-icon fa fa-download"></span>
-                </a>
-              </div>
+  <a className="button" href="https://drive.khairulimran.me/drive/s/SUN9wnPB7UHZpHQaFbZHpDKwSP6Yl2" target="_blank" rel="noopener noreferrer">
+    <span className="button-text">Download CV</span>
+    <span className="button-icon fa fa-download"></span>
+  </a>
+</div>
+
               {/* End download button */}
             </div>
           </div>
