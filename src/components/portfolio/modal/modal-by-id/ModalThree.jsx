@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 // internal
 import CloseImg from "../../../../../public/assets/img/cancel.svg";
 import PortfolioData from '../../portfolioData';
-import img1 from "../../../../../public/assets/img/portfolio/project-1.jpg";
-import img2 from "../../../../../public/assets/img/portfolio/project-2.jpg";
+//import img1 from "../../../../../public/assets/img/portfolio/project-1.jpg";
+//import img2 from "../../../../../public/assets/img/portfolio/project-2.jpg";
 
 const ModalThree = ({modalId,setGetModal}) => {
   let settings = {
@@ -75,14 +75,12 @@ const ModalThree = ({modalId,setGetModal}) => {
                 <figure className="modal__img">
                   <Slider {...settings}>
                     <div>
-                      <Image src={item.image} alt="portfolio project demo" />
+                      <Image src={item.image} width={895} height={552} alt="portfolio project demo" />
                     </div>
+                    {item.image2 && ( // Check if item.image2 is not empty or null
                     <div>
-                      <Image src={img1} alt="portfolio project demo" />
-                    </div>
-                    <div>
-                      <Image src={img2} alt="portfolio project demo" />
-                    </div>
+                      <Image src={item.image2} width={895} height={552} alt="portfolio project demo" />
+                    </div>)}
                   </Slider>
                 </figure>
 

@@ -6,8 +6,12 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'staging.dev-aplikasiniaga.com',
-        port: '',
         pathname: '/wp-content/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'khairulimran.com',
+        pathname: '/img/**', // Adjust the pathname based on your image directory structure
       },
     ],
   },

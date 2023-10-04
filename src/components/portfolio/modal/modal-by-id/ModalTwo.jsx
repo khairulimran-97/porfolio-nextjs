@@ -3,13 +3,14 @@ import React from 'react';
 import CloseImg from "../../../../../public/assets/img/cancel.svg";
 import PortfolioData from '../../portfolioData';
 
-const ModalTwo = ({modalId,setGetModal}) => {
+const ModalOne = ({modalId,setGetModal}) => {
   return (
-    <div className="modal_portfolio">
+    <div className="modal_portfolio ">
         <div
           className="modal__outside"
           onClick={() => setGetModal(false)}
         ></div>
+        <div></div>
         <div className="modal__content">
           {PortfolioData.filter((item) => item.id === modalId).map((item) => {
             return (
@@ -55,10 +56,10 @@ const ModalTwo = ({modalId,setGetModal}) => {
                       </div>
                     );
                   })}
-                </div> 
-                <figure className="modal__img"> 
-                <Image src={item.image} alt="portfolio project demo" />
-              </figure>
+                </div>
+                <figure className="modal__img">
+                  <Image src={item.image} width={895} height={552} alt="portfolio project demo" />
+                </figure>
 
                 <button
                   className="close-modal"
@@ -74,4 +75,4 @@ const ModalTwo = ({modalId,setGetModal}) => {
   );
 };
 
-export default ModalTwo;
+export default ModalOne;

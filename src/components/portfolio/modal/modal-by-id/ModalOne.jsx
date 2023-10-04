@@ -58,7 +58,7 @@ const ModalOne = ({modalId,setGetModal}) => {
                   })}
                 </div>
                 <figure className="modal__img">
-                  <Image src={item.image} alt="portfolio project demo" />
+                  <Image src={item.image} width={895} height={552} alt="portfolio project demo" />
                 </figure>
 
                 <button

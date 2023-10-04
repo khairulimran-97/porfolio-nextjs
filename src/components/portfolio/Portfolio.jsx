@@ -19,10 +19,10 @@ const Portfolio = () => {
         <Tabs>
           <TabList className="portfolio-tab-list" data-aos="fade-up">
             <Tab>ALL</Tab>
-            <Tab>LOGO</Tab>
-            <Tab>VIDEO</Tab>
-            <Tab>GRAPHIC DESIGN</Tab>
-            <Tab>MOCKUP</Tab>
+            <Tab>CORPORATE WEBSITE</Tab>
+            <Tab>ECOMMERCE WEBSITE</Tab>
+            <Tab>BLOG WEBSITE</Tab>
+            <Tab>LANDING PAGE</Tab>
           </TabList>
 
           <div className="container">
@@ -41,7 +41,7 @@ const Portfolio = () => {
                         className="tab-content"
                         onClick={() => handleModal(id)}
                       >
-                        <Image src={image} alt="portfolio project demo" />
+                        <Image src={image} width={895} height={552} alt="portfolio project demo" />
                         <h3>
                           <span className="conent-title">{type}</span>
                         </h3>
@@ -54,7 +54,7 @@ const Portfolio = () => {
 
             <TabPanel>
               <div className="tab-container">
-                {PortfolioData.filter((item) => item.tag.includes("logo")).map(
+                {PortfolioData.filter((item) => item.tag.includes("corporate")).map(
                   (item) => {
                     const { id, type, image, delayAnimation } = item;
                     return (
@@ -82,7 +82,7 @@ const Portfolio = () => {
 
             <TabPanel>
               <div className="tab-container">
-                {PortfolioData.filter((item) => item.tag.includes("video")).map(
+                {PortfolioData.filter((item) => item.tag.includes("ecommerce")).map(
                   (item) => {
                     const { id, type, image, delayAnimation } = item;
                     return (
@@ -111,7 +111,7 @@ const Portfolio = () => {
             <TabPanel>
               <div className="tab-container">
                 {PortfolioData.filter((item) =>
-                  item.tag.includes("graphic design")
+                  item.tag.includes("blog")
                 ).map((item) => {
                   const { id, type, image, delayAnimation } = item;
                   return (
@@ -139,7 +139,7 @@ const Portfolio = () => {
             <TabPanel>
               <div className="tab-container">
                 {PortfolioData.filter((item) =>
-                  item.tag.includes("mockup")
+                  item.tag.includes("landing")
                 ).map((item) => {
                   const { id, type, image, delayAnimation } = item;
                   return (

@@ -12,7 +12,8 @@ const PortfolioData = [
   {
     id: 1,
     type: "mockup project",
-    image: Image1,
+    image: "https://khairulimran.com/img/projects/project-15.jpg",
+    image2: "https://khairulimran.com/img/projects/project-15.jpg",
     tag: ["mockup"],
     delayAnimation: "0",
     modalDetails: [
@@ -28,12 +29,13 @@ const PortfolioData = [
   {
     id: 2,
     type: "youtube project",
-    image: Image2,
+    image: "https://khairulimran.com/img/projects/project-15.jpg",
+    image2: "https://khairulimran.com/img/projects/project-15.jpg",
     tag: ["video"],
     delayAnimation: "100",
     modalDetails: [
       {
-        project: "video",
+        project: "Testing Ajaaa",
         client: "Videohive",
         language: " Adobe After Effects",
         preview: "www.videohive.net",
@@ -44,13 +46,14 @@ const PortfolioData = [
   {
     id: 3,
     type: "slider project",
-    image: Image3,
+    image: "https://khairulimran.com/img/projects/project-16.jpg",
+    image2: "https://khairulimran.com/img/projects/project-15.jpg",
     tag: [],
     delayAnimation: "200",
     modalDetails: [
       {
         project: "Website",
-        client: "Themeforest",
+        client: "Hellooo Brother",
         language: " HTML, CSS, Javascript",
         preview: "www.envato.com",
         link: "https://www.envato.com",
@@ -60,8 +63,9 @@ const PortfolioData = [
   {
     id: 4,
     type: "local project",
-    image: Image4,
-    tag: ["logo", "video"],
+    image: "https://khairulimran.com/img/projects/project-15.jpg",
+    image2: "https://khairulimran.com/img/projects/project-15.jpg",
+    tag: ["corporate", "video"],
     delayAnimation: "0",
     modalDetails: [
       {
@@ -140,7 +144,8 @@ const PortfolioData = [
   {
     id: 9,
     type: "behence project",
-    image: Image9,
+    image: "https://khairulimran.com/img/projects/project-15.jpg",
+    image2: "https://khairulimran.com/img/projects/project-15.jpg",
     tag: ["graphic design", "mockup"],
     delayAnimation: "200",
     modalDetails: [
