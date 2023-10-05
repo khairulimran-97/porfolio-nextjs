@@ -10,8 +10,8 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'khairulimran.com',
-        pathname: '/img/**', // Adjust the pathname based on your image directory structure
+        hostname: 'cp.khairulimran.com',
+        pathname: '/wp-content/uploads/**', // Adjust the pathname based on your image directory structure
       },
     ],
   },

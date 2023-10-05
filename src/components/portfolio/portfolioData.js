@@ -1,163 +1,42 @@
-import Image1 from "../../../public/assets/img/portfolio/project-1.jpg";
-import Image2 from "../../../public/assets/img/portfolio/project-2.jpg";
-import Image3 from "../../../public/assets/img/portfolio/project-3.jpg";
-import Image4 from "../../../public/assets/img/portfolio/project-4.jpg";
-import Image5 from "../../../public/assets/img/portfolio/project-5.jpg";
-import Image6 from "../../../public/assets/img/portfolio/project-6.jpg";
-import Image7 from "../../../public/assets/img/portfolio/project-7.jpg";
-import Image8 from "../../../public/assets/img/portfolio/project-8.jpg";
-import Image9 from "../../../public/assets/img/portfolio/project-9.jpg";
+const PortfolioData = [];
 
-const PortfolioData = [
-  {
-    id: 1,
-    type: "mockup project",
-    image: "https://khairulimran.com/img/projects/project-15.jpg",
-    image2: "https://khairulimran.com/img/projects/project-15.jpg",
-    tag: ["mockup"],
-    delayAnimation: "0",
-    modalDetails: [
-      {
-        project: "Website",
-        client: "Envato",
-        language: "HTML, CSS, Javascript",
-        preview: "www.envato.com",
-        link: "https://www.envato.com/",
-      },
-    ],
-  },
-  {
-    id: 2,
-    type: "youtube project",
-    image: "https://khairulimran.com/img/projects/project-15.jpg",
-    image2: "https://khairulimran.com/img/projects/project-15.jpg",
-    tag: ["video"],
-    delayAnimation: "100",
-    modalDetails: [
-      {
-        project: "Testing Ajaaa",
-        client: "Videohive",
-        language: " Adobe After Effects",
-        preview: "www.videohive.net",
-        link: "https://www.videohive.net",
-      },
-    ],
-  },
-  {
-    id: 3,
-    type: "slider project",
-    image: "https://khairulimran.com/img/projects/project-16.jpg",
-    image2: "https://khairulimran.com/img/projects/project-15.jpg",
-    tag: [],
-    delayAnimation: "200",
-    modalDetails: [
-      {
-        project: "Website",
-        client: "Hellooo Brother",
-        language: " HTML, CSS, Javascript",
-        preview: "www.envato.com",
-        link: "https://www.envato.com",
-      },
-    ],
-  },
-  {
-    id: 4,
-    type: "local project",
-    image: "https://khairulimran.com/img/projects/project-15.jpg",
-    image2: "https://khairulimran.com/img/projects/project-15.jpg",
-    tag: ["corporate", "video"],
-    delayAnimation: "0",
-    modalDetails: [
-      {
-        project: "video",
-        client: "Videohive",
-        language: " Adobe After Effects",
-        preview: "www.videohive.net",
-        link: "https://www.videohive.net",
-      },
-    ],
-  },
-  {
-    id: 5,
-    type: "saas project",
-    image: Image5,
-    tag: ["logo"],
-    delayAnimation: "100",
-    modalDetails: [
-      {
-        project: "Web Application",
-        client: "Themeforest",
-        language: "HTML, CSS, ReactJS",
-        preview: "www.envato.com",
-        link: "https://themeforest.net/item/deski-saas-software-react-template/33799794",
-      },
-    ],
-  },
-  {
-    id: 6,
-    type: "mockup project",
-    image: Image6,
-    tag: ["logo", "mockup"],
-    delayAnimation: "200",
-    modalDetails: [
-      {
-        project: "Website",
-        client: "Themeforest",
-        language: "HTML, CSS, Javascript",
-        preview: "www.pexels.com",
-        link: "https://www.pexels.com",
-      },
-    ],
-  },
-  {
-    id: 7,
-    type: "facebook project",
-    image: Image7,
-    tag: ["logo"],
-    delayAnimation: "0",
-    modalDetails: [
-      {
-        project: "Website",
-        client: "Facebook",
-        language: "HTML, CSS, Javascript",
-        preview: "www.facebook.com",
-        link: "https://www.facebook.com/ibthemes",
-      },
-    ],
-  },
-  {
-    id: 8,
-    type: "dribble project",
-    image: Image8,
-    tag: ["graphic design"],
-    delayAnimation: "100",
-    modalDetails: [
-      {
-        project: "Website",
-        client: "Dribbble",
-        language: "HTML, CSS, Javascript",
-        preview: "www.dribbble.com",
-        link: "https://dribbble.com/ib-themes",
-      },
-    ],
-  },
-  {
-    id: 9,
-    type: "behence project",
-    image: "https://khairulimran.com/img/projects/project-15.jpg",
-    image2: "https://khairulimran.com/img/projects/project-15.jpg",
-    tag: ["graphic design", "mockup"],
-    delayAnimation: "200",
-    modalDetails: [
-      {
-        project: "Website",
-        client: "Behance",
-        language: "HTML, CSS, Javascript",
-        preview: "www.behance.com",
-        link: "https://www.behance.net/ib-themes",
-      },
-    ],
-  },
-];
+// Function to format WordPress API response and update PortfolioData
+const updatePortfolioData = async () => {
+  try {
+    const response = await fetch('https://cp.khairulimran.com/wp-json/wp/v2/api?acf_format=standard&per_page=100');
+    const wordpressData = await response.json();
+
+    // Update PortfolioData with formatted WordPress data
+    const formattedData = wordpressData.map((item) => {
+      // Remove "https://" and trailing slashes from the preview URL
+      const cleanedPreview = item.acf.website_details.preview.replace(/^https?:\/\//, '').replace(/\/+$/, '');
+
+      return {
+        id: item.id,
+        type: item.acf.porfolio_data.website_type,
+        image: item.acf.porfolio_data.porfolio_image_1,
+        image2: item.acf.porfolio_data.porfolio_image_2,
+        tag: item.acf.porfolio_data.tag,
+        modalDetails: [
+          {
+            project: item.acf.website_details.project,
+            client: item.title.rendered,
+            language: item.acf.website_details.platform,
+            preview: cleanedPreview,
+            link: item.acf.website_details.preview,
+          },
+        ],
+      };
+    });
+
+    // Update PortfolioData array
+    PortfolioData.push(...formattedData);
+  } catch (error) {
+    console.error('Error updating PortfolioData:', error);
+  }
+};
+
+// Call the function to update PortfolioData
+updatePortfolioData();
 
 export default PortfolioData;

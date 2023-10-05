@@ -51,7 +51,7 @@ const ModalThree = ({modalId,setGetModal}) => {
                         </div>
                         <div className="col-12 col-sm-6 mb-2">
                           <i className="fa fa-code pr-2"></i>
-                          Language :{" "}
+                          Language/Platform :{" "}
                           <span className="ft-wt-600 uppercase">
                             {details.language}
                           </span>
