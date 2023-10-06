@@ -75,11 +75,13 @@ const ModalThree = ({modalId,setGetModal}) => {
                 <figure className="modal__img">
                   <Slider {...settings}>
                     <div>
-                      <Image src={item.image} width={895} height={552} alt="portfolio project demo" />
+                      <a href={item.image} target="_blank" rel="noopener noreferrer">
+                      <Image src={item.image} width={895} height={552} alt="portfolio project demo" /></a>
                     </div>
                     {item.image2 && ( // Check if item.image2 is not empty or null
                     <div>
-                      <Image src={item.image2} width={895} height={552} alt="portfolio project demo" />
+                      <a href={item.image2} target="_blank" rel="noopener noreferrer">
+                      <Image src={item.image2} width={895} height={552} alt="portfolio project demo" /></a>
                     </div>)}
                   </Slider>
                 </figure>

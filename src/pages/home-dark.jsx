@@ -152,29 +152,7 @@ const HomeDark = () => {
 
             {/* Blog Content Starts */}
             
-            <TabPanel className="blog">
-              <div
-                className="title-section text-start text-sm-center "
-                data-aos="fade-up"
-                data-aos-duration="1200"
-              >
-                <h1>
-                  my <span>blog</span>
-                </h1>
-                <span className="title-bg">posts</span>
-              </div>
-              <div
-                className="container"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-              >
-                {/*  Articles Starts  */}
-                <div className="row pb-50">
-                  <Blog />
-                </div>
-                {/* Articles Ends */}
-              </div>
-            </TabPanel>
+            
 
             {/* Blog Content Ends */}
           </div>
