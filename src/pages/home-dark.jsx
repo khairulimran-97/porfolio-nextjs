@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Hero from "../components/hero/Hero";
 import AboutMain from "../components/about";
@@ -21,9 +21,24 @@ const menuItem = [
 ];
 
 const HomeDark = () => {
+  const [contactDescription, setContactDescription] = useState(null);
   useEffect(() => {
     document.querySelector("body").classList.remove("rtl");
   }, []);
+  useEffect(() => {
+    const fetchContactDescription = async () => {
+      try {
+        const response = await fetch("https://cp.khairulimran.com/wp-json/acf/v3/options/options");
+        const data = await response.json();
+        setContactDescription(data.acf.description);
+      } catch (error) {
+        console.error("Error fetching contact description:", error);
+      }
+    };
+
+    fetchContactDescription();
+  }, []);
+
   return (
     <Wrapper>
       <SEO pageTitle={"Home Dark"} />
@@ -111,12 +126,10 @@ const HomeDark = () => {
                   {/*  Left Side Starts */}
                   <div className="col-12 col-lg-4">
                     <h3 className="text-uppercase custom-title mb-0 ft-wt-600 pb-3">
-                      {"Don't"} be shy !
+                      {contactDescription && contactDescription.heading}
                     </h3>
                     <p className="open-sans-font mb-4">
-                      Feel free to get in touch with me. I am always open to
-                      discussing new projects, creative ideas or opportunities
-                      to be part of your visions.
+                    {contactDescription && contactDescription.simple_description}
                     </p>
                     <Address />
                     {/* End Address */}
